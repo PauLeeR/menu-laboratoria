@@ -1,11 +1,56 @@
-@media (min-width: 1px) and (max-width: 767px){
-	ul {
-		
+@media only screen and (max-width: 767px){
+	.navbar {
+		display: flex;
+		flex-direction: column;
+		background-color: gray;
+		margin-right: 30px;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
 	}
-}
 
-@media (min-width: 768px) {
-	ul {
+	.icono-menu{
+		display: block;
+		width: 100px;
+		height: 100px;
+		margin-top: 20px;
+	}
+
+	.container-flex{
+		width: 100%;
+		flex-direction: column;
+		/*el menu se despliega en forma de columna*/
+	}
+
+	button {
+		display: block;
+	}
+
+	nav ul {
+		/*display: none;*/
+		flex-direction: column;
+	}
+
+	ul li{
+		border-right: hidden; /*oculto esta clase para que no aparezca la linea en el lado derecho como aparecia en la versión desktop*/
+		width: 100%;/*trataba de ponerle la línea que va debajo de los elementos del li pero no me tomaba el ancho, con el ancho en 100% sí lo toma*/
+		border-bottom: 2px solid black; 
+	}
+
+	ul li a {
+		display: block;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 26px;
+		font-weight: 800;
+		flex-direction: column;
+		color: yellow;
+		align-items: left;
+		text-align: left;
+		text-decoration: none;
+		cursor: move;
+		border-left: hidden;
 		
 	}
+
+
 }
